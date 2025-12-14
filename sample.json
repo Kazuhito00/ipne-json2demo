@@ -1,0 +1,118 @@
+{
+    "node_list": [
+        "1:WebCam",
+        "2:Grayscale",
+        "3:PoseEstimation",
+        "5:Resize",
+        "6:SemanticSegmentation",
+        "7:ImageConcat"
+    ],
+    "link_list": [
+        [
+            "1:WebCam:Image:Output01",
+            "2:Grayscale:Image:Input01"
+        ],
+        [
+            "2:Grayscale:Image:Output01",
+            "5:Resize:Image:Input01"
+        ],
+        [
+            "1:WebCam:Image:Output01",
+            "3:PoseEstimation:Image:Input01"
+        ],
+        [
+            "1:WebCam:Image:Output01",
+            "6:SemanticSegmentation:Image:Input01"
+        ],
+        [
+            "1:WebCam:Image:Output01",
+            "7:ImageConcat:Image:Input04"
+        ],
+        [
+            "5:Resize:Image:Output01",
+            "7:ImageConcat:Image:Input03"
+        ],
+        [
+            "3:PoseEstimation:Image:Output01",
+            "7:ImageConcat:Image:Input02"
+        ],
+        [
+            "6:SemanticSegmentation:Image:Output01",
+            "7:ImageConcat:Image:Input01"
+        ]
+    ],
+    "1:WebCam": {
+        "id": "1",
+        "name": "WebCam",
+        "setting": {
+            "ver": "0.0.1",
+            "pos": [
+                0,
+                0
+            ]
+        }
+    },
+    "2:Grayscale": {
+        "id": "2",
+        "name": "Grayscale",
+        "setting": {
+            "ver": "0.0.1",
+            "pos": [
+                323,
+                16
+            ]
+        }
+    },
+    "3:PoseEstimation": {
+        "id": "3",
+        "name": "PoseEstimation",
+        "setting": {
+            "ver": "0.0.1",
+            "pos": [
+                474,
+                268
+            ],
+            "3:PoseEstimation:Text:Input02Value": "MediaPipe Pose(Complexity0)",
+            "3:PoseEstimation:Float:Input03Value": 0.3
+        }
+    },
+    "5:Resize": {
+        "id": "5",
+        "name": "Resize",
+        "setting": {
+            "ver": "0.0.1",
+            "pos": [
+                644,
+                39
+            ],
+            "5:Resize:Int:Input02Value": 640,
+            "5:Resize:Int:Input03Value": 480,
+            "5:Resize:Text:Input04Value": "INTER_LINEAR"
+        }
+    },
+    "6:SemanticSegmentation": {
+        "id": "6",
+        "name": "SemanticSegmentation",
+        "setting": {
+            "ver": "0.0.1",
+            "pos": [
+                160,
+                348
+            ],
+            "6:SemanticSegmentation:Text:Input02Value": "MediaPipe SelfieSegmentation(LandScape)",
+            "6:SemanticSegmentation:Float:Input03Value": 0.5
+        }
+    },
+    "7:ImageConcat": {
+        "id": "7",
+        "name": "ImageConcat",
+        "setting": {
+            "ver": "0.0.1",
+            "pos": [
+                938,
+                78
+            ],
+            "slot_id": 4
+        }
+    }
+}
