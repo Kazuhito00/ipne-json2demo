@@ -4,7 +4,7 @@
 # ipne-json2demo
 <img width="1138" height="246" alt="image" src="https://github.com/user-attachments/assets/aabb5d98-5f95-49c3-a57e-6576f7aca5fc" /><br>
 
-[Image-Processing-Node-Editor](https://github.com/Kazuhito00/Image-Processing-Node-Editor)でExportしたノード設定(JSONファイル)から、OpenCVデモ用のPythonスクリプトを自動生成するツールです。<br>
+[Image-Processing-Node-Editor](https://github.com/Kazuhito00/Image-Processing-Node-Editor)でExportしたノード設定(JSONファイル)から、OpenCVデモ用のPythonスクリプトを生成するツールです。<br>
 
 
 #  Requirement 
