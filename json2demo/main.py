@@ -23,7 +23,7 @@ def main():
     )
     parser.add_argument("json_file", help="入力JSONファイル")
     parser.add_argument(
-        "output_file", nargs="?", help="出力Pythonファイル（省略時は標準出力）"
+        "output_file", nargs="?", default="output.py", help="出力Pythonファイル（デフォルト: output.py）"
     )
     parser.add_argument("--perf", action="store_true", help="処理時間計測コードを生成")
 
