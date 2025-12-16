@@ -1,11 +1,13 @@
+> **Note**
+> <br>試験的なリポジトリです
+
 # ipne-json2demo
-[Image-Processing-Node-Editor](https://github.com/Kazuhito00/Image-Processing-Node-Editor)でExportしたノード設定(JSONファイル)から、<br>
-スタンドアロンで動作するOpenCV HighGUIデモコードを自動生成するツールです。
+<img width="1138" height="246" alt="image" src="https://github.com/user-attachments/assets/aabb5d98-5f95-49c3-a57e-6576f7aca5fc" /><br>
 
-ノードエディターで作成した画像処理パイプラインを、<br>
-配布可能なPythonスクリプトとして出力できます。
+[Image-Processing-Node-Editor](https://github.com/Kazuhito00/Image-Processing-Node-Editor)でExportしたノード設定(JSONファイル)から、OpenCVデモ用のPythonスクリプトを自動生成するツールです。<br>
 
-# Note
+
+#  Requirement 
 ```
 opencv-python
 mediapipe      ※MediaPipeノード使用時に必要
@@ -43,18 +45,15 @@ Image-Processing-Node-EditorでExportしたJSONファイルのパス
 
 ### 使用例
 ```bash
-# output.pyに出力（デフォルト）
-python -m json2demo sample.json
+# jsonからPythonスクリプトを生成
+python -m json2demo sample.json sample.py
 
-# ファイル名を指定して出力
-python -m json2demo sample.json demo.py
-
-# 処理時間計測付きで生成
+# 処理時間計測用の処理付きスクリプトを生成
 python -m json2demo sample.json demo_perf.py --perf
 ```
 
 ### 生成されたコードの実行
-生成されたデモコードは以下のようなコマンドライン引数をサポートします（入力ノードに応じて異なります）。
+生成されたデモコードは以下のようなコマンドライン引数をサポートします（入力ノードに応じて異なります）
 
 ```bash
 # WebCamノードを使用する場合
@@ -177,7 +176,7 @@ sample.jsonには以下のパイプラインが定義されています：
 - ImageConcat（4画像の結合表示）
 
 # Author
-Image-Processing-Node-Editor: 高橋かずひと(https://twitter.com/KzhtTkhs)
+高橋かずひと(https://twitter.com/KzhtTkhs)
 
 # License
 ipne-json2demo is under [Apache-2.0 license](LICENSE).
